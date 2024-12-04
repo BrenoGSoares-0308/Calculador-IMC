@@ -1,19 +1,37 @@
 # Calculadora IMC
-Desc
+Este projeto tem como o objetivo calcular o indice IMC de cada pessoa, dando em seguida a classificacao de acordo com o resultado obtido.
+O projeto, sendo um aplicativo android nativo, foi baseado na linguagem de programacao KOTLIN.
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
-Screenshots
+Screen 1
+
+<img src="https://github.com/user-attachments/assets/4a8b5a3b-eee4-44ef-a9a2-af3b6b286062" width=160/>
+
+
+Screen 2
+
+<img src="https://github.com/user-attachments/assets/616172b6-0660-4a0e-ab3b-b97a299c0245" width=160/>
 
 ## Tecnologias
-Techs
+-Activity
+-Intent
+-Snackbar
+-Viewgroups
+-LinearLayout
+-ConstraintLayout
+-Views
+-TextView
+-EditText
+-Button
+
 
 
 ## License
 ```
 The MIT License (MIT)
 
-Copyright (c) 2023 Roque Buarque Junior
+Copyright (c) 2024 Breno Gouveia Soares
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
