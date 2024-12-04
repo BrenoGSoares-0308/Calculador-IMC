@@ -1,8 +1,10 @@
 package com.comunidadedevspace.imc
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
@@ -22,13 +24,42 @@ class MainActivity : AppCompatActivity() {
         val btncalcular = findViewById<Button>(R.id.btn_calcular)
 
         btncalcular.setOnClickListener {
-            val peso: Float = edtpeso.text.toString().toFloat()
-            val altura: Float =  edtaltura.text.toString().toFloat()
+            val pesostr: String = edtpeso.text.toString()
+            val alturastr: String =  edtaltura.text.toString()
 
-            val alturaq2= altura * altura
-            val resultado = peso / alturaq2
+            if (pesostr == "" || alturastr == "") {
+                //Mostrar mensagem pro usuario
+                Snackbar
+                    .make(
+                        edtpeso,
+                        "Preencha todos os campos",
+                        Snackbar.LENGTH_LONG
+                    )
+                    .show()
+            }
 
-            println("o seu imc eh " + resultado)
+            else {
+                val peso = edtpeso.text.toString().toFloat()
+                val altura = edtaltura.text.toString().toFloat()
+
+                val alturaq2 = altura * altura
+                val resultado = peso / alturaq2
+
+                //Navegar para a proxima tela
+                //criar um layout para a proxima tela
+                //Passar dados para a proxima tela
+
+                //Intent = classe do proprio android
+
+                val intent = Intent(this, ResultActivity::class.java)
+                intent.putExtra(KEY_RESULT_IMC, resultado)
+                startActivity(intent)
+
+                //Cores
+                //EdiText background + Icone
+                //Gradiente + Icone + titulo + descricao
+
+            }
         }
     }
 }
